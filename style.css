@@ -1,0 +1,675 @@
+/* GLOBAL */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: rgb(238, 235, 230);
+    color: #1A202C;
+}
+
+h1, h2, h3 {
+    letter-spacing: 0.4px;
+    margin-top: 0;
+}
+
+p {
+    letter-spacing: 0.2px;
+}
+
+/* HEADER (FIX IMPORTANTE) background changes first rectangle*/
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: white;
+    border-bottom: 1px solid white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo img {
+    height: 110px;
+}
+
+/* NAVIGATION background changes the buttons colour*/
+.main-nav a {
+    text-decoration: none;
+    color: #080808;
+    background: #ede6d8;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 12px;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.25s ease;
+}
+
+.main-nav a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(255, 253, 253, 0.15);
+
+    /* mantém mesma cor background changes colour when u click on the buttons*/
+    background: #0B1220;
+    color: white;
+}
+
+.main-nav a:active {
+    transform: scale(0.97);
+}
+
+/* HERO background changes the first big rectangle*/
+.hero {
+    height: 680px;
+    display: flex;
+    background: #ede6d8;
+}
+
+/* HERO IMAGE */
+.hero-image {
+    flex: 1.4;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(242, 242, 242, 0) 55%,
+            #ede6d8
+        ),
+        url("img/background.png");
+
+    background-size: 150%;
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+/* HERO CONTENT color changes the first bige rectangles's text colour  */
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 80px;
+    color: #28241a;
+    transform: translateY(-35px);
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: 300;
+    margin-bottom: 65px;
+}
+
+.hero p {
+    font-size: 19px;
+    opacity: 0.82;
+    line-height: 1.55;
+
+    max-width: 520px;     /* controla largura */
+    margin: 0 auto;       /* ⭐ centraliza horizontalmente */
+    text-align: center;   /* ⭐ centraliza o texto */
+}
+
+
+/* HERO BUTTON changes the bordas of the first button */
+.hero-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #28241a;
+    border: 1px solid #28241a;
+    padding: 12px 30px;
+    border-radius: 999px;
+    margin-top: 38px;
+    transition: all 0.25s ease;
+}
+
+a,
+button {
+    transition: all 0.18s ease;
+}
+
+a:active,
+button:active {
+    transform: translateY(2px) scale(0.96);
+    filter: brightness(0.95);
+}
+
+
+
+/* background changes the button's color when you press it*/
+
+.hero-button:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+}
+
+/* SECTIONS */
+section {
+    padding: 95px 60px;
+    text-align: center;
+}
+
+.section-subtitle {
+    margin-bottom: 50px;   /* aumenta espaço abaixo do texto */
+}
+
+
+/* TREATMENTS */
+#treatments {
+    position: relative;
+    padding: 70px 60px;
+    scroll-margin-top: 120px;
+    background-image: url("img/pic.png");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+#treatments h2 {
+    margin-top: -40px;
+    margin-bottom: 40px;
+}
+
+
+
+/* background changes the second big rectangle's color*/
+
+#treatments::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(11, 18, 32, 0.65);  /* ⭐ intensidade da escuridão */
+    z-index: 1;
+}
+
+#treatments * {
+    position: relative;
+    z-index: 2;
+}
+
+
+#treatments > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.treatments-section {
+    display: flex;
+    justify-content: flex-start;   /* ⭐ pushes everything left */
+    align-items: center;
+}
+
+
+
+.treatments-content {
+    flex: 1;
+    padding: 60px;
+    text-align: left;   /* ⭐ critical */
+}
+
+/* color changes the second biger rectangle text's color */
+
+#treatments h2,
+#treatments .section-subtitle {
+    color: white;
+}
+
+
+/* GRID CONSISTENTE */
+.treatments-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    max-width: 520px;
+    margin: 0;
+}
+
+/* CARDS background changes the card's color and color changes text  */
+.treatment-card {
+    background: linear-gradient(145deg, #ede6d8);
+    color: #28241a;
+    border-radius: 14px;
+    padding: 26px;
+    box-shadow: 0 14px 34px rgba(0,0,0,0.18);
+}
+
+
+.treatment-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(0,0,0,0.18);
+}
+
+/* color changes the icon's color*/
+
+.treatment-card .icon {
+    font-size: 18px;
+    margin-bottom: 6px;
+    color: #28241a;
+}
+
+/* color changes the title of each card*/
+
+.treatment-card h3 {
+    color: #000000;
+}
+
+/* color changes the content in the cards */
+
+.treatment-card p {
+    color: #28241a;
+}
+
+
+
+/* MOBILE FIX REAL */
+@media (max-width: 900px) {
+
+    .treatments-section {
+        flex-direction: column;
+    }
+
+    .treatments-image {
+        width: 100%;
+        min-height: 240px;
+    }
+
+    .treatments-grid {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+
+    .treatments-content {
+        padding: 0;
+        text-align: center;
+    }
+}
+
+
+/* TEAM */
+.team {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+/* background changes the members cards color and color changes the texts color */
+
+.member {
+    background: #ede6d8;
+    color: #28241a;
+    padding: 20px;
+    border-radius: 14px;
+    width: 220px;
+    box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+}
+
+.member img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+    margin: 0 auto 12px;
+}
+
+/* ABOUT * background changes the third big rectangle's color and color changes its text */
+
+.about-section {
+    background: #ede6d8;
+    color: rgb(38, 35, 35);
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-intro {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+/* color changes the title on the third big rectangle */
+
+.about-intro h2 {
+    color: black;
+    font-size: 32px;
+}
+
+/* color changes the highlighted sentence */
+
+.about-highlight {
+    color: black;
+    font-weight: 500;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* background changes the color of the two boxes inside the third big rectangle */
+
+.about-block {
+    background: #0B1220;
+    color: rgb(236, 231, 215);
+    padding: 28px;
+    border-radius: 14px;
+    text-align: left;
+}
+
+/* color changes buttons color and border changes the border */
+
+.about-button {
+    display: inline-block;
+    margin-top: 18px;
+    text-decoration: none;
+    color: rgb(236, 231, 215);
+    border: 1px solid rgb(236, 231, 215);
+    padding: 10px 22px;
+    border-radius: 999px;
+
+    transition: all 0.18s ease;   /* ⭐ importante */
+}
+
+/*background changes the color when you press on the button */
+.about-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    background: rgba(255,255,255,0.08); /* opcional */
+}
+
+.about-button:active {
+    transform: translateY(2px) scale(0.96);
+    filter: brightness(0.95);
+}
+
+
+/* CONTACT BUTTON */
+.contact-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #c5cfe3;
+    border: 1px solid #0B1220;
+    padding: 12px 26px;
+    border-radius: 999px;
+    transition: 0.25s ease;
+}
+
+.contact-button:hover {
+    background: #0B1220;
+    color: white;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #ede6d8 ;
+    color: black;
+}
+
+/* CONTACT SECTION background changes the contact's section background color and color changes the title's color */
+.contact-section {
+    background: #0B1220;
+    color: rgb(236, 231, 215);
+    padding: 90px 60px;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.contact-info {
+    text-align: left;
+}
+
+.contact-info h2 {
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+/* color changes the content's color (text) */
+.contact-description {
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+.contact-block {
+    margin-bottom: 18px;
+}
+
+/* color changes the options color */ 
+.contact-block h3 {
+    margin: 0;
+    font-size: 15px;
+    color: #C6A96B;
+    font-weight: 600;
+}
+
+/* color changes the info color */
+.contact-block p {
+    margin: 4px 0 0;
+    color: rgba(255,255,255,0.75);
+    font-size: 14px;
+}
+
+/* CONTACT BUTTON (POLIDO) */
+.contact-button {
+    display: inline-block;
+    margin-top: 25px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.6);
+    padding: 11px 26px;
+    border-radius: 999px;
+    transition: all 0.18s ease;
+}
+
+.contact-button:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.contact-button:active {
+    transform: translateY(2px) scale(0.96);
+    filter: brightness(0.95);
+}
+
+/* MAP */
+.contact-map iframe {
+    width: 100%;
+    height: 340px;
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 14px 34px rgba(255,255,255,0.7);
+}
+
+/* MOBILE */
+/* MOBILE CONTACT */
+@media (max-width: 900px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-map iframe {
+        height: 260px;
+    }
+}
+
+/* MOBILE HEADER FIX */
+@media (max-width: 900px) {
+
+    .site-header {
+        flex-direction: column;
+        padding: 18px 20px;
+        gap: 12px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .main-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .main-nav a {
+        margin: 0;
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+}
+
+/* MOBILE HERO FIX */
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .hero-image {
+        flex: none;
+        height: 220px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero-content {
+        padding: 40px 20px;
+        transform: none;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 15px;
+        max-width: 100%;
+    }
+}
+
+/* MOBILE GLOBAL SPACING */
+@media (max-width: 900px) {
+    section {
+        padding: 70px 20px;
+    }
+}
+
+/* ABOUT MOBILE FIX (CORRIGIDO) */
+@media (max-width: 900px) {
+
+    .about-container {
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .about-intro,
+    .about-block {
+        text-align: center;
+        padding: 22px 18px;
+    }
+
+    .about-block ul {
+        text-align: left;
+        display: inline-block;
+    }
+
+    .about-block p,
+    .about-block li {
+        font-size: 15px;
+        line-height: 1.6;
+        word-break: normal;
+    }
+}
+
+/* GLOBAL SAFETY */
+html, body {
+    overflow-x: hidden;
+}
+
+img, iframe {
+   max-width: 100%;
+   height: auto;
+   display: block;
+}
+
+/* BOTÃO HAMBURGER */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    margin-left: auto;   /* ⭐ EMPURRA PARA DIREITA */
+}
+
+
+/* MOBILE MENU */
+@media (max-width: 900px) {
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        background: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .main-nav a {
+        background: #0B1220;
+        color: white;
+        width: 90%;
+        justify-content: center;
+        margin: 6px 0;
+    }
+
+    .main-nav.open {
+        max-height: 300px; /* altura da animação */
+    }
+
+    .site-header {
+        position: sticky;
+    }
+}
