@@ -565,12 +565,17 @@ footer {
         height: auto;
     }
 
+  @media (max-width: 900px) {
+
     .hero-image {
         flex: none;
-        height: 220px;
+        height: 260px;                 /* ⭐ um pouco mais de espaço */
         background-size: cover;
-        background-position: center;
+        background-position: center top; /* ⭐ MOSTRA A CABEÇA */
     }
+
+}
+
 
     .hero-content {
         padding: 40px 20px;
