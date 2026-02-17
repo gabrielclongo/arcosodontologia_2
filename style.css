@@ -7,7 +7,7 @@ html {
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background: rgb(238, 235, 230);
+    background: #e9e6df;
     color: #1A202C;
 }
 
@@ -41,7 +41,7 @@ p {
 .main-nav a {
     text-decoration: none;
     color: #080808;
-    background: #ede6d8;
+    background: V;
     padding: 10px 22px;
     border-radius: 999px;
     font-size: 14px;
@@ -69,7 +69,7 @@ p {
 .hero {
     height: 680px;
     display: flex;
-    background: #ede6d8;
+    background: #e9e6df;
 }
 
 /* HERO IMAGE */
@@ -80,15 +80,21 @@ p {
             90deg,
             rgba(242, 242, 242, 0) 55%,
             #ede6d8
+            
         ),
-        url("img/background.png");
+        url("img/firstpic.png");
 
     background-size: 150%;
     background-position: left center;
     background-repeat: no-repeat;
+    background-position: center top;
+    background-position: 40% center;
+    background-position: 35% center;
+    background-position: center 20%;
+
 }
 
-/* HERO CONTENT color changes the first bige rectangles's text colour  */
+/* HERO CONTENT color changes the first big rectangles's text colour  */
 .hero-content {
     flex: 1;
     display: flex;
@@ -120,8 +126,9 @@ p {
 .hero-button {
     display: inline-block;
     text-decoration: none;
-    color: #28241a;
-    border: 1px solid #28241a;
+    background: #0B1220;
+    color: #e9e6df;
+    border: #0B1220;
     padding: 12px 30px;
     border-radius: 999px;
     margin-top: 38px;
@@ -143,9 +150,15 @@ button:active {
 
 /* background changes the button's color when you press it*/
 
-.hero-button:hover {
-    background: rgba(255, 255, 255, 0.08);
+.about-button:hover {
     transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    background: rgba(255,255,255,0.08); /* opcional */
+}
+
+.about-button:active {
+    transform: translateY(2px) scale(0.96);
+    filter: brightness(0.95);
 }
 
 /* SECTIONS */
@@ -233,7 +246,7 @@ section {
 
 /* CARDS background changes the card's color and color changes text  */
 .treatment-card {
-    background: linear-gradient(145deg, #ede6d8);
+    background: #e9e6df;
     color: #28241a;
     border-radius: 14px;
     padding: 26px;
@@ -304,8 +317,8 @@ section {
 /* background changes the members cards color and color changes the texts color */
 
 .member {
-    background: #ede6d8;
-    color: #28241a;
+    background: #0B1220;
+    color: #e9e6df;
     padding: 20px;
     border-radius: 14px;
     width: 220px;
@@ -325,7 +338,7 @@ section {
 /* ABOUT * background changes the third big rectangle's color and color changes its text */
 
 .about-section {
-    background: #ede6d8;
+    background: white;
     color: rgb(38, 35, 35);
 }
 
@@ -375,6 +388,7 @@ section {
     display: inline-block;
     margin-top: 18px;
     text-decoration: none;
+    background: #0B1220;
     color: rgb(236, 231, 215);
     border: 1px solid rgb(236, 231, 215);
     padding: 10px 22px;
@@ -416,7 +430,7 @@ section {
 footer {
     text-align: center;
     padding: 20px;
-    background: #ede6d8 ;
+    background: #e9e6df ;
     color: black;
 }
 
