@@ -571,7 +571,7 @@ footer {
         flex: none;
         height: 260px;                 /* ⭐ um pouco mais de espaço */
         background-size: cover;
-        background-position: center top; /* ⭐ MOSTRA A CABEÇA */
+        background-position: center 10%; /* ⭐ MOSTRA A CABEÇA */
     }
 
 }
